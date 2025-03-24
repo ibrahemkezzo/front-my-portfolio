@@ -48,63 +48,16 @@ const Hero: React.FC = () => {
             <div className="aspect-square max-w-md mx-auto relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-laravel/20 to-primary/5 rounded-full blur-3xl opacity-50"></div>
               
-              <div className="relative z-10 h-full w-full">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="h-full w-full">
-                  <path fill="#FF2D20" d="M40,120 Q50,60 100,80 Q150,100 160,20 Q170,130 120,170 Q70,200 40,120" opacity="0.2"></path>
+              <div className="relative z-10 h-full w-full flex items-center justify-center">
+                {/* Simple Large Laravel Logo */}
+                <svg viewBox="0 0 100 100" className="w-3/4 h-3/4">
+                  <g>
+                    <path 
+                      fill="#FF2D20" 
+                      d="M49.626,11.564a.809.809,0,0,1,.028.209V57.936a.8.8,0,0,1-.402.694l-9.209,5.3V39.3a.8.8,0,0,0-.4-.694L20.42,27.2V53.8l-5.88-3.4V23.532a.8.8,0,0,1,.4-.694L25,16.4,39.222,27.2a.8.8,0,0,0,.4.3.755.755,0,0,0,.4-.3L54.247,16.4l5.88,3.389a.8.8,0,0,1,.4.694v26.87L52.116,53.8V27.2l-9.209,5.3V57.936a.794.794,0,0,1-.028.213v-.007a.787.787,0,0,1-.176.391h0l-.045.05a.81.81,0,0,1-.154.124.035.035,0,0,1-.012.01l-.041.024-.012.005-.059.031h0a.823.823,0,0,1-.316.052h-.022a.605.605,0,0,1-.1-.008.8.8,0,0,1-.216-.058l-.038-.013L30.1,49.6l-5.88-3.39a.8.8,0,0,1-.4-.694V23.532a.8.8,0,0,1,.112-.4h0a.781.781,0,0,1,.071-.11l.014-.014a.785.785,0,0,1,.08-.081.766.766,0,0,1,.091-.07l.014-.009q.039-.022.08-.041L34.614,13.9l5.061,2.92a.8.8,0,0,0,.793,0L45.530,13.9,55.7,19.748a.5.5,0,0,1,.095.051.759.759,0,0,1,.092.07.73.73,0,0,1,.079.081l.014.014a.908.908,0,0,1,.07.11h0A.8.8,0,0,1,56.1,20.5V47.611l9.209-5.306V20.449L72,16.4l9.209,5.305V48.585a.8.8,0,0,1-.4.694L56.428,60.364a.8.8,0,0,1-.4.105h-.024a.8.8,0,0,1-.4-.105L30.568,45.7a.8.8,0,0,0-.4-.105h-.024a.8.8,0,0,0-.4.105l-9.209,5.306A.8.8,0,0,1,20,50.5v-2.9l5.88-3.391ZM49.626,81.739a.809.809,0,0,1,.028.209V87.1a.8.8,0,0,1-.402.694l-15.1,8.707a.8.8,0,0,1-.8,0L12.11,79.228a.8.8,0,0,1-.4-.694v-2.9l5.88-3.39v3.388a.8.8,0,0,0,.4.694l10.941,6.282ZM14.6,74.645l5.882-3.389,15.089,8.707V74.516a.8.8,0,0,0-.4-.694L20.481,65.78v3.388a.8.8,0,0,1-.4.694l-5.48,3.161v1.622Zm57.021-.233v1.622l-15.089,8.707a.8.8,0,0,1-.8,0L40.612,76.155a.8.8,0,0,1-.4-.694V70.124a.809.809,0,0,1,.028-.209h0a.787.787,0,0,1,.176-.391h0l.045-.05a.81.81,0,0,1,.154-.124l.012-.01.041-.024.012-.005.059-.031h0a.823.823,0,0,1,.316-.052h.022a.605.605,0,0,1,.1.008.8.8,0,0,1,.216.058l.038.013L60.726,78.395a.8.8,0,0,0,.8,0l9.209-5.306a.8.8,0,0,0,.4-.694V69.005l-5.88-3.39V69a.8.8,0,0,1-.4.694l-10.95,6.316,15.09,8.706a.8.8,0,0,0,.8,0l10.941-6.316a.8.8,0,0,0,.4-.694V74.318l-5.481-3.161a.8.8,0,0,1-.4-.694V67.075l5.88-3.39a.8.8,0,0,1,.8,0l5.888,3.4v2.9a.8.8,0,0,1-.4.694Z"
+                    />
+                  </g>
                 </svg>
-                
-                <div className="absolute top-1/4 left-1/4 glass rounded-2xl p-4 shadow-lg animate-logo-float">
-                  <GitBranch className="h-10 w-10 text-laravel" />
-                </div>
-                
-                <div className="absolute top-1/3 right-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float" style={{ animationDelay: "0.5s" }}>
-                  <Code className="h-10 w-10 text-primary" />
-                </div>
-                
-                <div className="absolute bottom-1/4 left-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float" style={{ animationDelay: "1s" }}>
-                  <Database className="h-10 w-10 text-laravel" />
-                </div>
-                
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative w-48 h-48">
-                    {/* Redesigned Laravel Logo with API and Git integration */}
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" className="w-full h-full">
-                      {/* Background Circle */}
-                      <circle cx="50" cy="50" r="45" fill="rgba(255,255,255,0.1)" className="dark:fill-gray-800/80" />
-                      
-                      {/* Laravel Symbol - Larger and Centered */}
-                      <g transform="translate(20, 20) scale(0.6)">
-                        <path fill="#FF2D20" d="M42,18.6c-.2,0-3.6-9.4-3.6-9.4l-4.3,7.2s-15.5-1.5-27.3,10.4c-4.2,4.2-6,10.3-5.1,22.3 0,0 3-5.5,10.2-9.2-.5-1.2-1-2.5-1.2-3.7-.7-4.6.4-8.9,3.1-12.2,4.8-5.9,13.1-7.5,22.9-5.6z" />
-                        <path fill="#FF2D20" d="M67.8,24c-3.6-3.1-8.2-4.9-13.2-5-1.4-.1-2.8,0-4.2.1 1.1,1.5,1.9,3.1,2.6,4.8 6.3.2,10.2,3.4,12,9.5 1.3,4.6.4,9.4-2.4,13.6 2,.4,4.1.5,6.2.2 6.5-.8,11.7-4.4,15.4-10.6-1.3-4.8-3.9-9.1-7.7-12.6z" />
-                        <path fill="#FF2D20" d="M42,33.8c-.7-.4-7-3.7-7.4-3.8-.4-.1-.8.1-1.1.3l-8,7.7s-4.7-1-7.5,3.1c-1.7,2.5-1.5,5.8.6,8.2 2,2.1,5.2,2.6,7.6,1.3 1.9-1,3.2-3,3.4-5.1.2-1.3-.1-2.6-.9-3.6.7-1.2,1.7-2.3,3-3.2 2.9-2,6.5-2.2,9.4-.6 1.5.9,2.7,2.2,3.4,3.7-2.8-3.4-6.3-6.9-8.2-7.1-2.7-.1-4.2,3.5-1.1,5.5 4.2,2.8,7.9,3.2,12.1,1.6 2.5-1,4.4-3.1,5.1-5.7.5-2-.2-4.2-2-5.6-3.2-2.3-7-2.1-10.2,0 .6.3,1.2.7,1.8,1.2z" />
-                      </g>
-                      
-                      {/* Connecting Nodes for a Network Effect */}
-                      <circle cx="25" cy="30" r="3" fill="#FF2D20" className="dark:fill-white" />
-                      <circle cx="75" cy="35" r="3" fill="#FF2D20" className="dark:fill-white" />
-                      <circle cx="30" cy="75" r="3" fill="#FF2D20" className="dark:fill-white" />
-                      <circle cx="70" cy="70" r="3" fill="#FF2D20" className="dark:fill-white" />
-                      
-                      {/* Connection Lines */}
-                      <line x1="25" y1="30" x2="50" y2="50" stroke="#FF2D20" strokeWidth="1" strokeDasharray="2,2" className="dark:stroke-white/50" />
-                      <line x1="75" y1="35" x2="50" y2="50" stroke="#FF2D20" strokeWidth="1" strokeDasharray="2,2" className="dark:stroke-white/50" />
-                      <line x1="30" y1="75" x2="50" y2="50" stroke="#FF2D20" strokeWidth="1" strokeDasharray="2,2" className="dark:stroke-white/50" />
-                      <line x1="70" y1="70" x2="50" y2="50" stroke="#FF2D20" strokeWidth="1" strokeDasharray="2,2" className="dark:stroke-white/50" />
-                      
-                      {/* API Symbol */}
-                      <g transform="translate(15, 20) scale(0.25)">
-                        <rect x="10" y="10" width="60" height="40" rx="5" fill="none" stroke="#444" strokeWidth="6" className="dark:stroke-white" />
-                        <text x="40" y="35" fontFamily="monospace" fontSize="24" textAnchor="middle" fill="#444" className="dark:fill-white">API</text>
-                      </g>
-                      
-                      {/* Git Symbol */}
-                      <g transform="translate(60, 60) scale(0.25)">
-                        <circle cx="32" cy="32" r="25" fill="none" stroke="#444" strokeWidth="6" className="dark:stroke-white" />
-                        <path d="M30,15 L30,45 M20,35 L40,35" stroke="#444" strokeWidth="6" fill="none" className="dark:stroke-white" />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
