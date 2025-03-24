@@ -1,17 +1,19 @@
 
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Code, Database, ShoppingCart, Layers } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 const Portfolio: React.FC = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
-    { id: 'all', label: 'All' },
-    { id: 'web', label: 'Web Apps' },
-    { id: 'api', label: 'APIs' },
-    { id: 'ecommerce', label: 'E-Commerce' },
+    { id: 'all', label: 'All', icon: <Layers className="h-4 w-4 mr-1" /> },
+    { id: 'web', label: 'Web Apps', icon: <Code className="h-4 w-4 mr-1" /> },
+    { id: 'api', label: 'APIs', icon: <Database className="h-4 w-4 mr-1" /> },
+    { id: 'ecommerce', label: 'E-Commerce', icon: <ShoppingCart className="h-4 w-4 mr-1" /> },
   ];
 
   const projects = [
@@ -66,12 +68,17 @@ const Portfolio: React.FC = () => {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center ${
                 activeFilter === filter.id
-                  ? 'bg-laravel text-white'
-                  : 'bg-white hover:bg-laravel/10'
+                  ? theme === 'dark' 
+                    ? 'bg-laravel text-white' 
+                    : 'bg-laravel text-white'
+                  : theme === 'dark'
+                    ? 'bg-gray-800 text-gray-300 hover:bg-laravel/20' 
+                    : 'bg-white hover:bg-laravel/10'
               }`}
             >
+              {filter.icon}
               {filter.label}
             </button>
           ))}
