@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const Navbar: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -49,7 +50,7 @@ const Navbar: React.FC = () => {
           </div>
           
           {/* Desktop navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
+          <div className={`hidden md:flex md:items-center md:space-x-8 ${language === 'ar' ? 'md:space-x-reverse rtl' : ''}`}>
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -59,7 +60,10 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <LanguageSwitcher />
+            <div className="flex items-center space-x-2">
+              <ThemeSwitcher />
+              <LanguageSwitcher />
+            </div>
           </div>
           
           {/* Mobile menu button */}
@@ -77,7 +81,7 @@ const Navbar: React.FC = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden glass mt-2 py-3 px-2 rounded-b-lg animate-fade-in">
-          <div className="flex flex-col space-y-3 px-4 pt-2 pb-4">
+          <div className={`flex flex-col space-y-3 px-4 pt-2 pb-4 ${language === 'ar' ? 'rtl' : ''}`}>
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -88,7 +92,8 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 flex space-x-2">
+              <ThemeSwitcher />
               <LanguageSwitcher />
             </div>
           </div>

@@ -8,7 +8,7 @@ const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'es' : 'en');
+    setLanguage(language === 'en' ? 'ar' : 'en');
   };
 
   return (
@@ -19,7 +19,7 @@ const LanguageSwitcher: React.FC = () => {
       className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium transition-all hover:bg-secondary"
     >
       <Globe className="h-4 w-4" />
-      <span>{language === 'en' ? 'ES' : 'EN'}</span>
+      <span>{language === 'en' ? 'عربي' : 'EN'}</span>
     </Button>
   );
 };

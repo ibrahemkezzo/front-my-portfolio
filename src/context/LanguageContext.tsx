@@ -1,7 +1,7 @@
 
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
-type Language = 'en' | 'es';
+type Language = 'en' | 'ar';
 
 type Translations = {
   [key in Language]: {
@@ -70,67 +70,75 @@ const translations: Translations = {
     
     // Footer
     'footer.rights': 'All rights reserved.',
+    
+    // Theme
+    'theme.dark': 'Dark Mode',
+    'theme.light': 'Light Mode',
   },
-  es: {
+  ar: {
     // Navbar
-    'nav.home': 'Inicio',
-    'nav.about': 'Sobre Mí',
-    'nav.services': 'Servicios',
-    'nav.portfolio': 'Portafolio',
-    'nav.contact': 'Contacto',
+    'nav.home': 'الرئيسية',
+    'nav.about': 'من أنا',
+    'nav.services': 'خدماتي',
+    'nav.portfolio': 'أعمالي',
+    'nav.contact': 'اتصل بي',
     
     // Hero
-    'hero.title': 'Desarrollador Backend Laravel',
-    'hero.subtitle': 'Creando aplicaciones web y APIs robustas',
-    'hero.cta': 'Contáctame',
-    'hero.secondary': 'Ver Portafolio',
+    'hero.title': 'مطور لارافيل الخلفي',
+    'hero.subtitle': 'بناء تطبيقات الويب و واجهات API قوية',
+    'hero.cta': 'اتصل بي',
+    'hero.secondary': 'مشاهدة الأعمال',
     
     // About
-    'about.title': 'Sobre Mí',
-    'about.subtitle': 'Desarrollador backend apasionado especializado en Laravel con experiencia en metodologías modernas de desarrollo de software',
-    'about.bio': 'Soy un desarrollador backend con amplia experiencia en la creación de aplicaciones web robustas utilizando Laravel. Mi experiencia incluye desarrollo de API RESTful, diseño de bases de datos y arquitectura de aplicaciones. Me apasiona crear código eficiente, escalable y mantenible.',
-    'about.experience': 'Años de Experiencia',
-    'about.projects': 'Proyectos Completados',
-    'about.clients': 'Clientes Satisfechos',
+    'about.title': 'من أنا',
+    'about.subtitle': 'مطور خلفي متخصص في لارافيل مع خبرة في منهجيات تطوير البرمجيات الحديثة',
+    'about.bio': 'أنا مطور خلفي ذو خبرة واسعة في بناء تطبيقات ويب قوية باستخدام لارافيل. تشمل خبرتي تطوير واجهات API، تصميم قواعد البيانات، وهندسة التطبيقات. أنا شغوف بإنشاء كود فعال وقابل للتطوير والصيانة.',
+    'about.experience': 'سنوات الخبرة',
+    'about.projects': 'المشاريع المنجزة',
+    'about.clients': 'العملاء الراضين',
     
     // Skills
-    'skills.title': 'Habilidades Técnicas',
-    'skills.backend': 'Desarrollo Backend',
-    'skills.database': 'Diseño de Bases de Datos',
-    'skills.api': 'APIs RESTful',
-    'skills.methodologies': 'Metodologías de Desarrollo',
-    'skills.tools': 'Herramientas de Desarrollo',
+    'skills.title': 'المهارات التقنية',
+    'skills.backend': 'تطوير البرمجيات الخلفية',
+    'skills.database': 'تصميم قواعد البيانات',
+    'skills.api': 'واجهات API',
+    'skills.methodologies': 'منهجيات التطوير',
+    'skills.tools': 'أدوات التطوير',
     
     // Services
-    'services.title': 'Mis Servicios',
-    'services.subtitle': 'Servicios especializados de desarrollo backend utilizando Laravel y tecnologías web modernas',
-    'services.laravel.title': 'Desarrollo Laravel',
-    'services.laravel.description': 'Aplicaciones web personalizadas construidas con Laravel, enfocándose en una arquitectura limpia y código mantenible.',
-    'services.api.title': 'Desarrollo de APIs',
-    'services.api.description': 'Diseño y desarrollo de APIs RESTful con documentación adecuada, seguridad y rendimiento.',
-    'services.db.title': 'Diseño de Bases de Datos',
-    'services.db.description': 'Diseño optimizado de esquemas de bases de datos, migraciones y ajuste de rendimiento de consultas para sus aplicaciones.',
-    'services.architecture.title': 'Arquitectura de Aplicaciones',
-    'services.architecture.description': 'Planificación de arquitecturas de aplicaciones escalables y mantenibles para proyectos complejos.',
+    'services.title': 'خدماتي',
+    'services.subtitle': 'خدمات تطوير خلفية متخصصة باستخدام لارافيل وتقنيات الويب الحديثة',
+    'services.laravel.title': 'تطوير لارافيل',
+    'services.laravel.description': 'تطبيقات ويب مخصصة مبنية باستخدام لارافيل، مع التركيز على هندسة نظيفة وكود قابل للصيانة.',
+    'services.api.title': 'تطوير واجهات API',
+    'services.api.description': 'تصميم وتطوير واجهات API مع توثيق مناسب، أمان، وأداء عالي.',
+    'services.db.title': 'تصميم قواعد البيانات',
+    'services.db.description': 'تصميم محسن لهيكل قواعد البيانات، وتحسين أداء الاستعلامات لتطبيقاتك.',
+    'services.architecture.title': 'هندسة التطبيقات',
+    'services.architecture.description': 'تخطيط هندسة تطبيقات قابلة للتوسع والصيانة للمشاريع المعقدة.',
     
     // Portfolio
-    'portfolio.title': 'Mi Portafolio',
-    'portfolio.subtitle': 'Una selección de proyectos que muestran mis habilidades y experiencia',
-    'portfolio.viewproject': 'Ver Proyecto',
-    'portfolio.technologies': 'Tecnologías:',
+    'portfolio.title': 'أعمالي',
+    'portfolio.subtitle': 'مجموعة من المشاريع التي توضح مهاراتي وخبرتي',
+    'portfolio.viewproject': 'عرض المشروع',
+    'portfolio.technologies': 'التقنيات:',
     
     // Contact
-    'contact.title': 'Ponte en Contacto',
-    'contact.subtitle': '¿Listo para comenzar tu proyecto? Contáctame para consulta o colaboración',
-    'contact.name': 'Tu Nombre',
-    'contact.email': 'Tu Email',
-    'contact.message': 'Tu Mensaje',
-    'contact.send': 'Enviar Mensaje',
-    'contact.success': '¡Mensaje enviado con éxito!',
-    'contact.error': 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.',
+    'contact.title': 'تواصل معي',
+    'contact.subtitle': 'مستعد لبدء مشروعك؟ اتصل بي للاستشارة أو التعاون',
+    'contact.name': 'اسمك',
+    'contact.email': 'بريدك الإلكتروني',
+    'contact.message': 'رسالتك',
+    'contact.send': 'إرسال الرسالة',
+    'contact.success': 'تم إرسال الرسالة بنجاح!',
+    'contact.error': 'خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.',
     
     // Footer
-    'footer.rights': 'Todos los derechos reservados.',
+    'footer.rights': 'جميع الحقوق محفوظة.',
+    
+    // Theme
+    'theme.dark': 'الوضع الداكن',
+    'theme.light': 'الوضع الفاتح',
   }
 };
 
