@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahem Kezzo - Laravel Developer</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme" data-theme="light">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <a href="#home" class="logo-link">
+                        <span class="logo-text">
+                            <span class="logo-bracket">&lt;</span>
+                            Dev
+                            <span class="logo-bracket">/&gt;</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop">
+                    <a href="#home" class="nav-link" data-key="nav.home">Home</a>
+                    <a href="#about" class="nav-link" data-key="nav.about">About</a>
+                    <a href="#services" class="nav-link" data-key="nav.services">Services</a>
+                    <a href="#portfolio" class="nav-link" data-key="nav.portfolio">Portfolio</a>
+                    <a href="#contact" class="nav-link" data-key="nav.contact">Contact</a>
+                    
+                    <div class="nav-controls">
+                        <button id="theme-toggle" class="control-btn">
+                            <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"/>
+                                <path d="m12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                            </svg>
+                            <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                        </button>
+                        
+                        <button id="language-toggle" class="control-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                            <span id="language-text">عربي</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" class="mobile-menu-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-content">
+                <a href="#home" class="mobile-nav-link" data-key="nav.home">Home</a>
+                <a href="#about" class="mobile-nav-link" data-key="nav.about">About</a>
+                <a href="#services" class="mobile-nav-link" data-key="nav.services">Services</a>
+                <a href="#portfolio" class="mobile-nav-link" data-key="nav.portfolio">Portfolio</a>
+                <a href="#contact" class="mobile-nav-link" data-key="nav.contact">Contact</a>
+                
+                <div class="mobile-controls">
+                    <button id="mobile-theme-toggle" class="control-btn">
+                        <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <path d="m12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                        </svg>
+                        <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                    
+                    <button id="mobile-language-toggle" class="control-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <span id="mobile-language-text">عربي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="section-container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="status-dot">
+                            <span class="ping"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <span>Laravel Expert</span>
+                    </div>
+                    
+                    <div class="hero-titles">
+                        <h2 class="hero-name">IBRAHEM KEZZO</h2>
+                        <h1 class="hero-title">
+                            <span data-key="hero.title">Backend Developer</span>
+                            <span class="title-dot">.</span>
+                        </h1>
+                    </div>
+                    
+                    <p class="hero-subtitle" data-key="hero.subtitle">
+                        Specialized in Laravel development, creating robust and scalable web applications with clean, maintainable code.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">
+                            <span data-key="hero.cta">Get In Touch</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="7" y1="17" x2="17" y2="7"/>
+                                <polyline points="7,7 17,7 17,17"/>
+                            </svg>
+                        </a>
+                        <a href="#portfolio" class="btn-outline" data-key="hero.secondary">View Work</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <div class="visual-bg"></div>
+                        
+                        <div class="visual-content">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="bg-shape">
+                                <path fill="#FF2D20" d="M40,120 Q50,60 100,80 Q150,100 160,20 Q170,130 120,170 Q70,200 40,120" opacity="0.2"></path>
+                            </svg>
+                            
+                            <div class="floating-icon floating-icon-1">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"/>
+                                    <circle cx="20" cy="21" r="1"/>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="floating-icon floating-icon-2">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16,18 22,12 16,6"/>
+                                    <polyline points="8,6 2,12 8,18"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="floating-icon floating-icon-3">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="main-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="laravel-logo">
+                                    <g transform="translate(25, 20) scale(0.6)">
+                                        <path fill="#FB503B" d="M42 18.6c-.2 0-3.6-9.4-3.6-9.4l-4.3 7.2s-15.5-1.5-27.3 10.4c-4.2 4.2-6 10.3-5.1 22.3 0 0 3-5.5 10.2-9.2-.5-1.2-1-2.5-1.2-3.7-.7-4.6.4-8.9 3.1-12.2 4.8-5.9 13.1-7.5 22.9-5.6z"></path>
+                                        <path fill="#FB503B" d="M67.8 24c-3.6-3.1-8.2-4.9-13.2-5-1.4-.1-2.8 0-4.2.1 1.1 1.5 1.9 3.1 2.6 4.8 6.3.2 10.2 3.4 12 9.5 1.3 4.6.4 9.4-2.4 13.6 2 .4 4.1.5 6.2.2 6.5-.8 11.7-4.4 15.4-10.6-1.3-4.8-3.9-9.1-7.7-12.6z"></path>
+                                        <path fill="#FB503B" d="M42 33.8c-.7-.4-7-3.7-7.4-3.8-.4-.1-.8.1-1.1.3l-8 7.7s-4.7-1-7.5 3.1c-1.7 2.5-1.5 5.8.6 8.2 2 2.1 5.2 2.6 7.6 1.3 1.9-1 3.2-3 3.4-5.1.2-1.3-.1-2.6-.9-3.6.7-1.2 1.7-2.3 3-3.2 2.9-2 6.5-2.2 9.4-.6 1.5.9 2.7 2.2 3.4 3.7-2.8-3.4-6.3-6.9-8.2-7.1-2.7-.1-4.2 3.5-1.1 5.5 4.2 2.8 7.9 3.2 12.1 1.6 2.5-1 4.4-3.1 5.1-5.7.5-2-.2-4.2-2-5.6-3.2-2.3-7-2.1-10.2 0 .6.3 1.2.7 1.8 1.2z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="about.title">About Me</h2>
+                <p class="section-subtitle" data-key="about.subtitle">Learn more about my background and expertise</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-bio" data-key="about.bio">
+                        I'm a passionate Laravel backend developer with 5+ years of experience building robust, scalable web applications. 
+                        I specialize in creating clean, maintainable code and designing efficient database architectures.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3 class="stat-value">5+</h3>
+                            <p class="stat-label" data-key="about.experience">Years Experience</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-value">30+</h3>
+                            <p class="stat-label" data-key="about.projects">Projects Completed</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-value">15+</h3>
+                            <p class="stat-label" data-key="about.clients">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-content">
+                    <h3 class="skills-title" data-key="skills.title">Technical Skills</h3>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <div class="skill-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                                <h4 data-key="skills.backend">Backend Development</h4>
+                            </div>
+                            <div class="skill-items">
+                                <span class="skill-item">Laravel</span>
+                                <span class="skill-item">PHP</span>
+                                <span class="skill-item">MVC Architecture</span>
+                                <span class="skill-item">OOP</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="skill-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                                </svg>
+                                <h4 data-key="skills.database">Database</h4>
+                            </div>
+                            <div class="skill-items">
+                                <span class="skill-item">MySQL</span>
+                                <span class="skill-item">PostgreSQL</span>
+                                <span class="skill-item">Redis</span>
+                                <span class="skill-item">Database Design</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="skill-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                                    <polyline points="16,18 22,12 16,6"/>
+                                    <polyline points="8,6 2,12 8,18"/>
+                                </svg>
+                                <h4 data-key="skills.api">API Development</h4>
+                            </div>
+                            <div class="skill-items">
+                                <span class="skill-item">RESTful APIs</span>
+                                <span class="skill-item">API Authentication</span>
+                                <span class="skill-item">JSON</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="skill-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"/>
+                                    <circle cx="20" cy="21" r="1"/>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                                </svg>
+                                <h4 data-key="skills.tools">Tools & Methodologies</h4>
+                            </div>
+                            <div class="skill-items">
+                                <span class="skill-item">Git</span>
+                                <span class="skill-item">GitHub</span>
+                                <span class="skill-item">Docker</span>
+                                <span class="skill-item">Agile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="services.title">Services</h2>
+                <p class="section-subtitle" data-key="services.subtitle">What I can help you with</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-key="services.laravel.title">Laravel Development</h3>
+                    <p class="service-description" data-key="services.laravel.description">
+                        Building robust web applications using Laravel framework with best practices and clean architecture.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                            <polyline points="16,18 22,12 16,6"/>
+                            <polyline points="8,6 2,12 8,18"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-key="services.api.title">API Development</h3>
+                    <p class="service-description" data-key="services.api.description">
+                        Creating RESTful APIs with proper authentication, documentation, and testing.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-key="services.db.title">Database Design</h3>
+                    <p class="service-description" data-key="services.db.description">
+                        Designing efficient database schemas and optimizing queries for better performance.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                            <rect x="7" y="3" width="10" height="3" rx="1"/>
+                            <rect x="3" y="8" width="18" height="13" rx="1"/>
+                            <line x1="12" y1="21" x2="12" y2="8"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-key="services.architecture.title">System Architecture</h3>
+                    <p class="service-description" data-key="services.architecture.description">
+                        Planning and implementing scalable system architectures for enterprise applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="portfolio.title">Portfolio</h2>
+                <p class="section-subtitle" data-key="portfolio.subtitle">Some of my recent work</p>
+            </div>
+
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="7" y="3" width="10" height="3" rx="1"/>
+                        <rect x="3" y="8" width="18" height="13" rx="1"/>
+                        <line x1="12" y1="21" x2="12" y2="8"/>
+                    </svg>
+                    All
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16,18 22,12 16,6"/>
+                        <polyline points="8,6 2,12 8,18"/>
+                    </svg>
+                    Web Apps
+                </button>
+                <button class="filter-btn" data-filter="api">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                    </svg>
+                    APIs
+                </button>
+                <button class="filter-btn" data-filter="ecommerce">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    E-Commerce
+                </button>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-grid">
+                <div class="portfolio-item" data-category="ecommerce">
+                    <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80" alt="E-Commerce Platform">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">E-Commerce Platform</h3>
+                            <p class="portfolio-tech">Technologies: Laravel, MySQL, Redis, API</p>
+                            <a href="#" class="portfolio-link">
+                                <span data-key="portfolio.viewproject">View Project</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7"/>
+                                    <polyline points="7,7 17,7 17,17"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1568495248636-6432b97bd949?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80" alt="Hotel Booking System">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Hotel Booking System</h3>
+                            <p class="portfolio-tech">Technologies: Laravel, PostgreSQL, TDD</p>
+                            <a href="#" class="portfolio-link">
+                                <span data-key="portfolio.viewproject">View Project</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7"/>
+                                    <polyline points="7,7 17,7 17,17"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="api">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80" alt="RESTful API Service">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">RESTful API Service</h3>
+                            <p class="portfolio-tech">Technologies: Laravel, API, OAuth, Docker</p>
+                            <a href="#" class="portfolio-link">
+                                <span data-key="portfolio.viewproject">View Project</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7"/>
+                                    <polyline points="7,7 17,7 17,17"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1664575599618-8f6bd76fc670?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80" alt="Inventory Management">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Inventory Management</h3>
+                            <p class="portfolio-tech">Technologies: Laravel, Livewire, MySQL</p>
+                            <a href="#" class="portfolio-link">
+                                <span data-key="portfolio.viewproject">View Project</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7"/>
+                                    <polyline points="7,7 17,7 17,17"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="contact.title">Get In Touch</h2>
+                <p class="section-subtitle" data-key="contact.subtitle">Let's discuss your next project</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-info-title" data-key="contact.info.title">Contact Information</h3>
+                    <p class="contact-info-text" data-key="contact.info.text">
+                        Ready to start your next Laravel project? Let's connect and discuss how I can help bring your ideas to life.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>contact@example.com</span>
+                        </div>
+                        <div class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>+1 (123) 456-7890</span>
+                        </div>
+                        <div class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>123 Developer Street, Coding City</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-key="contact.form.name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" data-key="contact.form.email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" data-key="contact.form.subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" data-key="contact.form.message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary full-width">
+                        <span data-key="contact.form.send">Send Message</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">
+                            <span class="logo-bracket">&lt;</span>
+                            Dev
+                            <span class="logo-bracket">/&gt;</span>
+                        </span>
+                    </div>
+                    <p class="footer-description">
+                        Laravel backend developer specialized in creating robust, scalable web applications and RESTful APIs.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-nav">
+                        <li><a href="#home" data-key="nav.home">Home</a></li>
+                        <li><a href="#about" data-key="nav.about">About</a></li>
+                        <li><a href="#services" data-key="nav.services">Services</a></li>
+                        <li><a href="#portfolio" data-key="nav.portfolio">Portfolio</a></li>
+                        <li><a href="#contact" data-key="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact</h3>
+                    <address class="footer-address">
+                        <p>123 Developer Street</p>
+                        <p>Coding City, 12345</p>
+                        <p>contact@example.com</p>
+                        <p>+1 (123) 456-7890</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; <span id="current-year"></span> Laravel Developer. <span data-key="footer.rights">All rights reserved.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
