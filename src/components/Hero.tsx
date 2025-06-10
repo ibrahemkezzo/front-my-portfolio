@@ -49,37 +49,33 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-laravel/20 to-primary/5 rounded-full blur-3xl opacity-50"></div>
               
               <div className="relative z-10 h-full w-full">
-                {/* Main Profile Image with Tilted Circle */}
+                {/* Main Profile Image */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative">
-                    <div className="w-80 h-80 relative overflow-hidden">
+                    <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl backdrop-blur-sm bg-white/10 dark:bg-gray-900/10">
                       <img 
                         src="/lovable-uploads/fdfdb052-714e-4179-9c14-376a7b6efdf4.png" 
-                        alt="Ibrahem Kezzo - Laravel Developer" 
-                        className="w-full h-full object-cover object-center" 
+                        alt="Ibrahem Kezzo - Laravel Developer"
+                        className="w-full h-full object-cover object-center"
                       />
-                      {/* Tilted circular border overlay */}
-                      <div className="absolute inset-0 rounded-full border-4 border-white/30 shadow-2xl backdrop-blur-sm bg-white/5 dark:bg-gray-900/5 transform rotate-12 scale-110"></div>
-                      {/* Additional tilted border for depth */}
-                      <div className="absolute inset-0 rounded-full border-2 border-laravel/20 transform -rotate-6 scale-105"></div>
                     </div>
                     {/* Subtle glow effect around the image */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-laravel/10 to-primary/5 blur-xl opacity-30 transform rotate-12"></div>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-laravel/10 to-primary/5 blur-xl opacity-30"></div>
                   </div>
                 </div>
                 
-                {/* Repositioned Floating Tech Icons - Around Edges */}
-                <div className="absolute top-8 left-8 glass rounded-2xl p-4 shadow-lg animate-logo-float">
+                {/* Floating Tech Icons */}
+                <div className="absolute top-1/4 left-1/4 glass rounded-2xl p-4 shadow-lg animate-logo-float">
                   <GitBranch className="h-10 w-10 text-laravel" />
                 </div>
                 
-                <div className="absolute top-8 right-8 glass rounded-2xl p-4 shadow-lg animate-logo-float" style={{
+                <div className="absolute top-1/3 right-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float" style={{
                   animationDelay: "0.5s"
                 }}>
                   <Code className="h-10 w-10 text-primary" />
                 </div>
                 
-                <div className="absolute bottom-8 left-16 glass rounded-2xl p-4 shadow-lg animate-logo-float" style={{
+                <div className="absolute bottom-1/4 left-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float" style={{
                   animationDelay: "1s"
                 }}>
                   <Database className="h-10 w-10 text-laravel" />
