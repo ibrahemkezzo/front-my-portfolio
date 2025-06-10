@@ -59,19 +59,19 @@ const Hero: React.FC = () => {
                 </div>
                 
                 {/* Floating Tech Icons */}
-                <div className="absolute top-1/4 left-1/4 glass rounded-2xl p-4 shadow-lg animate-logo-float">
+                <div className="absolute top-1/2 mt-16 left-1 glass p-4 shadow-lg animate-logo-float rounded-2xl mx-[72px] my-[135px]">
                   <GitBranch className="h-10 w-10 text-laravel" />
                 </div>
                 
                 <div style={{
                 animationDelay: "0.5s"
-              }} className="absolute top-1/3 right-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float my-[20px]">
+              }} className="absolute top-1 right-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float mx-[49px] my-[100px]">
                   <Code className="h-10 w-10 text-primary" />
                 </div>
                 
-                <div className="absolute bottom-1/4 left-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float" style={{
+                <div style={{
                 animationDelay: "1s"
-              }}>
+              }} className="absolute bottom-1/4 left-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float my-[17px]">
                   <Database className="h-10 w-10 text-laravel" />
                 </div>
               </div>
