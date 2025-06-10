@@ -1,13 +1,11 @@
-
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { ArrowRight, Code, Database, GitBranch } from 'lucide-react';
-
 const Hero: React.FC = () => {
-  const { t } = useLanguage();
-
-  return (
-    <section id="home" className="min-h-screen flex items-center pt-20">
+  const {
+    t
+  } = useLanguage();
+  return <section id="home" className="min-h-screen flex items-center pt-20">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
@@ -53,11 +51,7 @@ const Hero: React.FC = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative">
                     <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl backdrop-blur-sm bg-white/10 dark:bg-gray-900/10">
-                      <img 
-                        src="/lovable-uploads/fdfdb052-714e-4179-9c14-376a7b6efdf4.png" 
-                        alt="Ibrahem Kezzo - Laravel Developer"
-                        className="w-full h-full object-cover object-center"
-                      />
+                      <img src="/lovable-uploads/fdfdb052-714e-4179-9c14-376a7b6efdf4.png" alt="Ibrahem Kezzo - Laravel Developer" className="w-full h-full object-cover object-center" />
                     </div>
                     {/* Subtle glow effect around the image */}
                     <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-laravel/10 to-primary/5 blur-xl opacity-30"></div>
@@ -65,19 +59,19 @@ const Hero: React.FC = () => {
                 </div>
                 
                 {/* Floating Tech Icons */}
-                <div className="absolute top-1/4 left-1/4 glass rounded-2xl p-4 shadow-lg animate-logo-float">
+                <div className="absolute top-1/2 mt-16 left-1 glass p-4 shadow-lg animate-logo-float rounded-2xl mx-[72px] my-[135px]">
                   <GitBranch className="h-10 w-10 text-laravel" />
                 </div>
                 
-                <div className="absolute top-1/3 right-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float" style={{
-                  animationDelay: "0.5s"
-                }}>
+                <div style={{
+                animationDelay: "0.5s"
+              }} className="absolute top-1 right-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float mx-[49px] my-[100px]">
                   <Code className="h-10 w-10 text-primary" />
                 </div>
                 
-                <div className="absolute bottom-1/4 left-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float" style={{
-                  animationDelay: "1s"
-                }}>
+                <div style={{
+                animationDelay: "1s"
+              }} className="absolute bottom-1/4 left-1/6 glass rounded-2xl p-4 shadow-lg animate-logo-float my-[17px]">
                   <Database className="h-10 w-10 text-laravel" />
                 </div>
               </div>
@@ -85,8 +79,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
