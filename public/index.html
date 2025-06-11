@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -7,6 +6,41 @@
     <title>Ibrahem Kezzo - Laravel Developer</title>
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-image {
+            width: 395px;
+            height: 395px;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 47%;
+            transform: translate(-50%, -50%);
+            clip-path: ellipse(50% 50% at 50% 40%);
+            z-index: 2;
+        }
+        .image-frame {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            border: 2px solid #c0c0c0; /* Silver color */
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2NkgIJ/3P4QwK4MTAwQ8E8gJ6vX6W3XqR9zXjN3/5QdgAHAwAxvTWFd6AAAAAElFTkSuQmCC') repeat;
+        }
+        .visual-content {
+            position: relative;
+            text-align: center;
+        }
+        .floating-icon {
+            position: absolute;
+        }
+        .floating-icon-1 { top: 10%; left: 10%; }
+        .floating-icon-2 { top: 50%; right: 5%; }
+        .floating-icon-3 { bottom: 10%; left: 20%; }
+        </style>
 </head>
 <body class="light-theme" data-theme="light">
     <!-- Navigation -->
@@ -111,25 +145,16 @@
                     <div class="hero-titles">
                         <h2 class="hero-name">IBRAHEM KEZZO</h2>
                         <h1 class="hero-title">
-                            <span data-key="hero.title">Backend Developer</span>
+                            <span data-key="hero.title">Backend Laravel Developer</span>
                             <span class="title-dot">.</span>
                         </h1>
                     </div>
                     
                     <p class="hero-subtitle" data-key="hero.subtitle">
-                        Specialized in Laravel development, creating robust and scalable web applications with clean, maintainable code.
+                        Building robust web applications and APIs
                     </p>
                     
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn-primary">
-                            <span data-key="hero.cta">Get In Touch</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="7" y1="17" x2="17" y2="7"/>
-                                <polyline points="7,7 17,7 17,17"/>
-                            </svg>
-                        </a>
-                        <a href="#portfolio" class="btn-outline" data-key="hero.secondary">View Work</a>
-                    </div>
+                
                 </div>
                 
                 <div class="hero-visual">
@@ -137,9 +162,9 @@
                         <div class="visual-bg"></div>
                         
                         <div class="visual-content">
-                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="bg-shape">
-                                <path fill="#FF2D20" d="M40,120 Q50,60 100,80 Q150,100 160,20 Q170,130 120,170 Q70,200 40,120" opacity="0.2"></path>
-                            </svg>
+                            <div class="image-frame">
+                                <img src="lovable-uploads/fdfdb052-714e-4179-9c14-376a7b6efdf4.png" alt="Ibrahem Kezzo" class="hero-image" />
+                            </div>
                             
                             <div class="floating-icon floating-icon-1">
                                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2">
@@ -149,7 +174,7 @@
                                 </svg>
                             </div>
                             
-                            <div class="floating-icon floating-icon-2">
+                            <div class="floating-icon floating-icon-2" >
                                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <polyline points="16,18 22,12 16,6"/>
                                     <polyline points="8,6 2,12 8,18"/>
@@ -163,22 +188,26 @@
                                     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
                                 </svg>
                             </div>
-                            
-                            <div class="main-logo">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="laravel-logo">
-                                    <g transform="translate(25, 20) scale(0.6)">
-                                        <path fill="#FB503B" d="M42 18.6c-.2 0-3.6-9.4-3.6-9.4l-4.3 7.2s-15.5-1.5-27.3 10.4c-4.2 4.2-6 10.3-5.1 22.3 0 0 3-5.5 10.2-9.2-.5-1.2-1-2.5-1.2-3.7-.7-4.6.4-8.9 3.1-12.2 4.8-5.9 13.1-7.5 22.9-5.6z"></path>
-                                        <path fill="#FB503B" d="M67.8 24c-3.6-3.1-8.2-4.9-13.2-5-1.4-.1-2.8 0-4.2.1 1.1 1.5 1.9 3.1 2.6 4.8 6.3.2 10.2 3.4 12 9.5 1.3 4.6.4 9.4-2.4 13.6 2 .4 4.1.5 6.2.2 6.5-.8 11.7-4.4 15.4-10.6-1.3-4.8-3.9-9.1-7.7-12.6z"></path>
-                                        <path fill="#FB503B" d="M42 33.8c-.7-.4-7-3.7-7.4-3.8-.4-.1-.8.1-1.1.3l-8 7.7s-4.7-1-7.5 3.1c-1.7 2.5-1.5 5.8.6 8.2 2 2.1 5.2 2.6 7.6 1.3 1.9-1 3.2-3 3.4-5.1.2-1.3-.1-2.6-.9-3.6.7-1.2 1.7-2.3 3-3.2 2.9-2 6.5-2.2 9.4-.6 1.5.9 2.7 2.2 3.4 3.7-2.8-3.4-6.3-6.9-8.2-7.1-2.7-.1-4.2 3.5-1.1 5.5 4.2 2.8 7.9 3.2 12.1 1.6 2.5-1 4.4-3.1 5.1-5.7.5-2-.2-4.2-2-5.6-3.2-2.3-7-2.1-10.2 0 .6.3 1.2.7 1.8 1.2z"></path>
-                                    </g>
-                                </svg>
-                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">
+                            <span data-key="hero.cta">Contact Me</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="7" y1="17" x2="17" y2="7"/>
+                                <polyline points="7,7 17,7 17,17"/>
+                            </svg>
+                        </a>
+                        <a href="#portfolio" class="btn-outline" data-key="hero.secondary">View Portfolio</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
 
     <!-- About Section -->
     <section id="about" class="about-section">
@@ -588,5 +617,7 @@
 
     <script src="scripts/translations.js"></script>
     <script src="scripts/main.js"></script>
+    
+    
 </body>
 </html>
